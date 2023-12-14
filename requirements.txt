@@ -1,0 +1,5 @@
+Flask
+requests
+python_dotenv
+chatterbot
+chatterbot_corpus

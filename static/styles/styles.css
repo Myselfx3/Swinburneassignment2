@@ -1,0 +1,32 @@
+body{
+    display: flexbox;
+    justify-content: center;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.weather_table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: rgb(0, 0, 0);
+    text-align: left;
+    padding-top: 24px;
+}
+table {
+    border-collapse: collapse;
+    border: 1px;
+    border-color: black;
+}
+th,
+td {
+    padding: 1rem;
+}
+th {
+font-size: 24px;
+font-weight: bold;
+}
+td,tr {
+    font-size: 18px;
+}

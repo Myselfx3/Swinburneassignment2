@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+
+    <title>Trustworthy Tours Weather Report</title>
+</head>
+<body>
+    <h1>ChatterBot Weather App</h1>
+    <form id="chat-form">
+        <label for="user-input">You:</label>
+        <input type="text" id="user-input" name="user_input" autocomplete="off">
+        <button type="button" onclick="getResponse()">Send</button>
+    </form>
+
+    <table class="weather_table"> 
+        <tr>
+            <th>Location</th>
+            <th>Weather</th>
+            <th>Description</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Icon</th>
+        </tr>
+        {% for location in data.keys() %}
+       <tr>
+           <td>{getResponse}</td>
+           <td>{{data[getResponse].main}}</td>
+           <td>{{data[getResponse].description}}</td>
+           <td>{{data[getResponse].temperature}}°C</td>
+           <td>{{data[getResponse].humidity}}%</td>
+           <td><img src="https://openweathermap.org/img/wn/{{data[location].icon}}@2x.png"></td>
+
+
+       </tr>
+
+       {% endfor %}
+    </table>
+    <div id="chat-output"></div>
+
+</body>
+</html>
